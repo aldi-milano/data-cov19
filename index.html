@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+    <title>Data Cov-19</title>
+</head>
+<body>
+    <div class="input-container">
+        <div class="input-search">
+            <input type="search" name="" class="input-search-text" placeholder="Search here">
+            <button class="input-search-button" ><i class="fas fa-search input-search-icon"></i></button>
+        </div>
+    </div>
+    <div id="result-container">
+        <div class="table-responsive -sm result-table result.table">
+            <table class="table table-sm table-bordered caption-top">
+              <thead class="table-light primary">
+                <th scope="col">#</th>
+                <th scope="col">Provinsi</th>
+                <th scope="col">Positif</th>
+                <th scope="col">Sembuh</th>
+                <th scope="col">Meninggal</th>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
