@@ -16,15 +16,22 @@
     <title>Data Cov-19</title>
 </head>
 <body>
+  <div class="wrapper">
     <div class="input-container">
-        <div class="input-search">
-            <input type="search" name="" class="input-search-text" placeholder="Search here">
-            <button class="input-search-button" ><i class="fas fa-search input-search-icon"></i></button>
-        </div>
+      <div class="input-list">
+        <select class="form-select" aria-label="Default select example">
+          <option value="1">Indonesia</option>
+          <option value="2">Global</option>
+        </select>
+      </div>
+      <div class="input-search-container">
+        <input type="search" name="" class="input-search-text" placeholder="Search here">
+        <button class="input-search-button" ><i class="fas fa-search input-search-icon"></i></button>
+      </div>
     </div>
     <div id="result-container">
-        <div class="table-responsive -sm result-table result.table">
-            <table class="table table-sm table-bordered caption-top">
+      <div class="table-responsive -sm result-table result.table">
+        <table class="table table-sm table-bordered caption-top result-table">
               <thead class="table-light primary">
                 <th scope="col">#</th>
                 <th scope="col">Provinsi</th>
@@ -38,6 +45,7 @@
         </div>
       </div>
     </div>
+  </div>
     <script src="./script.js"></script>
-</body>
-</html>
+  </body>
+  </html>

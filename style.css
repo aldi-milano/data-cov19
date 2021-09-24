@@ -6,15 +6,23 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.input-container {
-  padding: 10px;
+.wrapper {
+  width: 80%;
+  margin: 5rem auto;
 }
 
-.input-search {
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.input-search-container {
   border: solid 0.5px lightgray;
   border-radius: 3px;
   width: 20rem;
-  padding: 5px;
+  padding: 3px;
   display: flex;
   justify-content: flex-end;
 }
@@ -51,7 +59,9 @@ body {
 }
 
 #result-container {
-  padding: 10px;
-  width: 80%;
   margin: auto;
+}
+
+.result-table th {
+  text-align: center;
 }

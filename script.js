@@ -8,12 +8,15 @@ const getData = () => {
     .then((result) => {
       result.data.forEach((item, index) => {
         arr.push(item);
-        let row = table.insertRow(index);
-        row.insertCell(0).innerHTML = index + 1;
-        row.insertCell(1).innerHTML = item.provinsi;
-        row.insertCell(2).innerHTML = item.kasusPosi.toLocaleString("id-ID");
-        row.insertCell(3).innerHTML = item.kasusSemb.toLocaleString("id-ID");
-        row.insertCell(4).innerHTML = item.kasusMeni.toLocaleString("id-ID");
+        table.innerHTML += `
+          <tr>
+            <th>${index + 1}</th>
+            <td>${item.provinsi}</td>
+            <td>${item.kasusPosi.toLocaleString("id-ID")}</td>
+            <td>${item.kasusSemb.toLocaleString("id-ID")}</td>
+            <td>${item.kasusMeni.toLocaleString("id-ID")}</td>
+          </tr>
+          `;
       });
     })
     .catch((err) => console.log(err, "Error euy..."));
@@ -26,15 +29,20 @@ const print = document.getElementById("result-container");
 
 button.addEventListener("click", function () {
   let keyword = document.querySelector(".input-search-text").value;
+  table.innerHTML = "";
   const regex = new RegExp(`${keyword}`, "ig");
-  arr.forEach((data, index) => {
-    if (regex.test(`${data.provinsi}`)) {
-      let row = table.insertRow(index);
-      row.insertCell(0).innerHTML = index + 1;
-      row.insertCell(1).innerHTML = data.provinsi;
-      row.insertCell(2).innerHTML = data.kasusPosi.toLocaleString("id-ID");
-      row.insertCell(3).innerHTML = data.kasusSemb.toLocaleString("id-ID");
-      row.insertCell(4).innerHTML = data.kasusMeni.toLocaleString("id-ID");
+  let counter = 1;
+  arr.forEach((item) => {
+    if (regex.test(`${item.provinsi}`)) {
+      table.innerHTML += `
+      <tr>
+        <th>${counter++}</th>
+        <td>${item.provinsi}</td>
+        <td>${item.kasusPosi.toLocaleString("id-ID")}</td>
+        <td>${item.kasusSemb.toLocaleString("id-ID")}</td>
+        <td>${item.kasusMeni.toLocaleString("id-ID")}</td>
+      </tr>
+      `;
     }
   });
 });
